@@ -3,16 +3,51 @@
 <body>
 
 <h2>JavaScript Arrays</h2>
+<p>The length property returns the length of an array.</p>
+
+<p id="demo7"></p>
+<p id="demo8"></p>
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo7").innerHTML = 
+    fruits[0] + "<br>" + fruits + "<br>" + fruits.sort() + "<br>"  + fruits[0];
+    let fLen = fruits.length;
+
+        let text = "<ul>";
+        for (let i = (fLen - 1); i >= 0; i--) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>"
+    document.getElementById("demo8").innerHTML = text;
+</script>
 
 <p>Array indexes are zero-based, which means the first item is [0].</p>
 
+<p id="demo6"></p> 
+<script>
+    let x = 0.2 + 0.1; //WHY!!!!!!!!!!!!!!!!!!!!!!
+    document.getElementById("demo6").innerHTML = "0.2 + 0.1 = " + x;
+</script>
+
+<div onmouseover="this.style.backgroundColor='red'">myDIV.</div>
+
+<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">The time is?</button><p id="demo5"></p>
+
+<script>
+    function displayDate() {
+        document.getElementById("demo5").innerHTML = Date();
+    }
+</script>
+
+<br><button onclick="document.getElementById('demo4').innerHTML=Date()">The time is?</button>
+<p id="demo4"></p>
+<br><button onclick="this.innerHTML = Date()">The time is?</button>
 <p id="demo"></p>
 <p id="demo1"></p>
 <p id="demo2"></p>
 <p id="demo3"></p>
-
-
-
 <script>
     const cars = ["Saab","Volvo","BMW"];
     document.getElementById("demo").innerHTML = cars[0]+ '<br>' + cars[1] + '<br>' + cars[2];
