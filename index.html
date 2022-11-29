@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html>
 <body>
+    <h2>JavaScript For Loop</h2>
+    <script>
+        const fruits = ["Apple", "Banana", "Orange"];
+            for (x of fruits) {
+                console.log(x);
+            }
+    </script>
+    <p id="demo10"></p>
+    
+    <script>
+        const cars1 = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+        let text = "";
+        for (let i = 0; i < cars1.length; i++) {
+            text += cars1[i] + " is number " + (i+1) + "<br>";
+        }
+
+        document.getElementById("demo10").innerHTML = text;
+    </script>
+
+    <p>Creates a new array with all array elements that passes a test.</p>
+    
+    <p id="demo9"></p>
+    
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        const over18 = numbers.filter(myFunction);
+
+        document.getElementById("demo9").innerHTML = over18;
+
+        function myFunction(value) {
+            return value < 18;
+        }
+    </script>
 
 <h2>JavaScript Arrays</h2>
 <p>The length property returns the length of an array.</p>
 
 <p id="demo7"></p>
 <p id="demo8"></p>
-<script>
-    const fruits = ["Banana", "Orange", "Apple", "Mango"];
-    document.getElementById("demo7").innerHTML = 
-    fruits[0] + "<br>" + fruits + "<br>" + fruits.sort() + "<br>"  + fruits[0];
-    let fLen = fruits.length;
 
-        let text = "<ul>";
-        for (let i = (fLen - 1); i >= 0; i--) {
-            text += "<li>" + fruits[i] + "</li>";
-        }
-        text += "</ul>"
-    document.getElementById("demo8").innerHTML = text;
-</script>
 
 <p>Array indexes are zero-based, which means the first item is [0].</p>
 
